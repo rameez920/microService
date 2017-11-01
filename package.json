@@ -1,0 +1,20 @@
+{
+  "name": "micro-service-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Rameez Arif",
+  "license": "ISC",
+  "dependencies": {
+    "aws-serverless-express": "^3.0.2",
+    "bluebird": "^3.5.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "mysql": "^2.15.0",
+    "sha.js": "^2.4.9"
+  }
+}
