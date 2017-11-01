@@ -25,6 +25,7 @@ app.post('/messages', (req, res, next) => {
 
   getHash(req.body.message, (err, result) => {
     if (err) {
+      console.log(err)
       res.status(500)
       return res.json({'digest': result})
     } else {
@@ -37,6 +38,7 @@ app.post('/messages', (req, res, next) => {
 app.get('/messages/:hash', (req, res, next) => {
   getMessage(req.params.hash, (err, result) => {
     if (err) {
+      console.log(err)
       return res.status(500).end()
     } else {
       if (result) {
@@ -48,8 +50,6 @@ app.get('/messages/:hash', (req, res, next) => {
     }
   })
 });
-
-
 
 //returns the original message based on the SHA256 hash passed in
 let getMessage = (hash, callback) => {
